@@ -4,6 +4,29 @@ p1s='X'
 
 p2s='O'
 
+def check_rows(symbol):
+    for r in range(3):
+        count=0
+        for c in range(3):
+            if board[r][c]==symbol:
+             count=count+1
+        if count==3:
+            print(symbol,'won')
+            return True
+        return False
+    
+def check_cols(symbol):
+    for c in range(3):
+        count=0
+        for r in range(3):
+            if board[r][c]==symbol:
+             count=count+1
+        if count==3:
+            print(symbol,'won')
+            return True
+        return False
+    
+    
 def won(symbol):
     return check_rows(symbol) or check_cols(symbol) or check_diagonals(symbol)
 
