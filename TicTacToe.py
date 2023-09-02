@@ -4,6 +4,9 @@ p1s='X'
 
 p2s='O'
 
+def won(symbol):
+    return check_rows(symbol) or check_cols(symbol) or check_diagonals(symbol)
+
 def place(symbol):
     print(numpy.matrix(board))
     while(1):
