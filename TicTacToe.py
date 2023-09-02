@@ -1,6 +1,7 @@
 import numpy
 board=numpy.array([['_','_','_'],['_','_','_'],['_','_','_']])
 p1s='X'
+
 p2s='O'
 
 def place(symbol):
@@ -21,8 +22,11 @@ def play():
             place(p1s)
             if won(p1s):
                 break
-            else:
+        else:
                 print('O turn')
                 place(p2s)
                 if won(p2s):
                     break
+        
+    if not(won(p1s)) and not (won(p2s)):
+        print('Draw')
