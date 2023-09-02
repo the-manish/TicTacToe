@@ -26,8 +26,11 @@ def check_cols(symbol):
             return True
         return False
     
-def check_diagonals(symbols):
+def check_diagonals(symbol):
     if board[0][2]==board[1][1] and board[1][1]==board[2][0] and board[1][1]==symbol:
+        print(symbol,'won')
+        return True
+    if board[0][0]==board[1][1] and board[1][1]==board[2][2] and board[1][1]==symbol:
         print(symbol,'won')
         return True
     return False
