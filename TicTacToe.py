@@ -63,3 +63,5 @@ def play():
         
     if not(won(p1s)) and not (won(p2s)):
         print('Draw')
+
+play()
